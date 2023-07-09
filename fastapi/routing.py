@@ -114,7 +114,7 @@ def _prepare_response_content(
             for k, v in res.items()
         }
     elif dataclasses.is_dataclass(res):
-        return dataclasses.asdict(res)
+        return res.__dict__
     return res
 
 
